@@ -1,6 +1,7 @@
 import { writable, readable } from "svelte/store";
-
 import * as d3 from "d3";
+import fs from "fs";
+import datapoints from "./data";
 
 let data;
 let meanData = [];
@@ -8,7 +9,8 @@ let mD;
 let countries;
 
 // load data
-data = await d3.csv("./src/data/big-mac-data.csv");
+data = datapoints;
+// data = await d3.csv("./src/data/big-mac-data.csv");
 
 // data manipulations
 data = data
