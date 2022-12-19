@@ -46,6 +46,12 @@
     z-index: 1;
   }
 
+  @media only screen and (max-width: 600px) {
+    .pContent {
+      padding: 30px 10px;
+    }
+  }
+
   p {
     padding: 0 1%;
     text-align: justify;
@@ -61,7 +67,7 @@
 
   h2 {
     font-family: "Roboto", sans-serif;
-    font-size: 4em;
+    font-size: 3.8em;
     line-height: 1.1;
   }
 </style>
