@@ -86,7 +86,7 @@
         {/each}
         <!-- <path d={path(mesh)} class="borders" />  -->
       </g>
-      <g class="choropleth" transform="translate({width * 0.96} 0)">
+      <g class="choropleth" transform="translate({width * 0.94} 0)">
         {#each countries as country, i}
           {#if country.properties.name != "Antarctica"}
             <path

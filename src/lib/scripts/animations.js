@@ -13,26 +13,27 @@ export function boxAnimation() {
       anticipatePin: 1,
     },
   });
-  tl.from("#p-container-box p", {
-    height: 0,
-    duration: 1,
-    ease: Power2.easeOut,
-  });
+  // tl.from("#p-container-box p", {
+  //   height: 0,
+  //   duration: 1,
+  //   ease: Power2.easeOut,
+  // });
 
   tl.from(".map-wrapper", {
-    y: "-=1000",
-    rotate: 560,
+    y: "+=1000",
+    // rotate: 160,
     transformOrigin: "50% 50%",
-    duration: 2,
-    ease: Power2.easeOut,
+    duration: 3,
+    ease: backOut,
   });
 
-  tl.from(".box-line", {
-    height: 0,
-    duration: 2,
-    ease: Power2.easeOut,
-  });
+  // tl.from(".box-line", {
+  //   height: 0,
+  //   duration: 2,
+  //   ease: Power2.easeOut,
+  // });
   tl.to(".map-wrapper", {
+    delay: 3,
     scale: 2,
     duration: 2,
     // transformOrigin: "50% 50%",
@@ -61,7 +62,7 @@ export function boxAnimation() {
     duration: 0,
   });
 
-  tl.to(".box-line", { height: 450 });
+  tl.to(".box-line", { height: 450, ease: Power2.easeOut, duration:3  });
   tl.from("#map-legend", { opacity: 0 });
 
   tl.to("#choropleths", {
@@ -91,11 +92,11 @@ export function burgerAnimation() {
     },
   });
 
-  tl.from("#p-container-burger p", {
-    height: 0,
-    duration: 1,
-    ease: Power2.easeOut,
-  });
+  // tl.from("#p-container-burger p", {
+  //   height: 0,
+  //   duration: 1,
+  //   ease: Power2.easeOut,
+  // });
 
   tl.from("#bottom-bun", {
     y: "-=1000",
@@ -164,11 +165,11 @@ export function friesAnimation() {
     },
   });
 
-  tl.from("#p-container-fries p", {
-    height: 0,
-    duration: 1,
-    ease: Power2.easeOut,
-  });
+  // tl.from("#p-container-fries p", {
+  //   height: 0,
+  //   duration: 1,
+  //   ease: Power2.easeOut,
+  // });
   tl.from(".fries-and-m", {
     rotate: 30,
     y: 710,
@@ -240,13 +241,12 @@ export function bubbleAnimation() {
       anticipatePin: 1,
     },
   });
-  tl.from("#p-container-cup p", {
-    height: 0,
-    duration: 1,
-    ease: Power2.easeOut,
-  });
+  // tl.from("#p-container-cup p", {
+  //   height: 0,
+  //   duration: 1,
+  //   ease: Power2.easeOut,
+  // });
   tl.from("#cup-and-chart", { y: -800, ease: Power2.easeIn, duration: 3 });
-
   tl.from(".bubble", { delay: 2, opacity: 0 });
   tl.from("#cup-name", { opacity: 0 }, "<");
   tl.from("#cup-legend", { opacity: 0 });
@@ -268,41 +268,9 @@ export function bubbleAnimation() {
   return tl;
 }
 
-export function introAnimation() {
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".section-1",
-      start: "top top",
-      pin: true,
-      scrub: 1,
-      end: "+=200%",
-      anticipatePin: 1,
-    },
-  });
-  tl.to("#reference", { opacity: 0 });
-  tl.to("#my-name", { duration: 2, ease: Power2.easeIn, y: -400 });
-  tl.to(
-    "#pannel-container-intro",
-    {
-      yPercent: -150,
-      duration: 3,
-      ease: Power2.easeInOut,
-    },
-    "-=50%"
-  );
-
-  tl.from("#p-container-intro p", {
-    height: 0,
-    duration: 5,
-    ease: Power2.easeOut,
-  });
-  tl.to("#reference", { opacity: 0, delay: 3 });
-
-  return tl;
-}
+  
 
 export function initAnimations() {
-  introAnimation();
   boxAnimation();
   burgerAnimation();
   friesAnimation();

@@ -9,10 +9,18 @@
     color: #27251f;
     background-color: white;
   }
+
+
+  @media only screen and (max-width: 600px) {
+    h3 {
+      font-size: 1.5em;
+    }
+  }
+
+
   p {
     font-family: "Roboto", sans-serif;
     line-height: 2;
-
     font-weight: 400;
     font-size: 1em;
     text-align: center;

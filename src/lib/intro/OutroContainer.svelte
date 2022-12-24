@@ -1,14 +1,14 @@
 <script>
-  import IntroductionPanel from "./IntroductionPanel.svelte";
-  import MyName from "./MyName.svelte";
+import OutroPanel from "./OutroPanel.svelte";
+ import MyName from "./MyName.svelte";
   
 
   
 </script>
 
-<section class="section-1">
+<section class="section-6">
   <div id="pannel-container-intro">
-    <IntroductionPanel />
+    <OutroPanel />
   </div>
   <div id="myname-container">
     <MyName />

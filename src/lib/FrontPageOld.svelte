@@ -2,7 +2,7 @@
 </script>
 
 <div class="firstContainer">
-  <h1>The Big Mac Index</h1>
+  <h1>Burgernomics</h1>
   <p>A data story by Stefan Pullen</p>
 </div>
 

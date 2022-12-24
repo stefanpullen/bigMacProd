@@ -65,55 +65,59 @@
     .nice();
 </script>
 
-    <svg viewBox="0 0 {width} {height}" preserveAspectRatio="xMidYMin meet">
-      <g id="burger-bars">
-        {#each data as d, index}
-          <rect
-            class="bars"
-            x={margin.left}
-            y={d.name == "Average"
-              ? yScaleData(d.name) - 5
-              : yScaleData(d.name)}
-            width={xScale(+d.dollar_price)}
-            height={d.name == "Average"
-              ? yScale.bandwidth() + 10
-              : yScale.bandwidth()}
-            fill={d.name == "Average" ? "#ffc72c" : "#da291c"}
-          />
-          <rect
-            class="bars-containers"
-            x={margin.left}
-            y={d.name == "Average"
-              ? yScaleData(d.name) - 5
-              : yScaleData(d.name)}
-            width={xScale(maxPrice)}
-            height={d.name == "Average"
-              ? yScale.bandwidth() + 10
-              : yScale.bandwidth()}
-            stroke={d.name == "Average" ? "#ffc72c" : "#da291c"}
-          />
-        {/each}
-        <Counts {margin} {xScale} yScale={yScaleData} dataPlot={data} />
-      </g>
+<svg viewBox="0 0 {width} {height}" preserveAspectRatio="xMidYMin meet">
+  <g id="burger-bars">
+    {#each data as d, index}
+      <rect
+        class="bars"
+        x={margin.left}
+        y={d.name == "Average" ? yScaleData(d.name) - 5 : yScaleData(d.name)}
+        width={xScale(+d.dollar_price)}
+        height={d.name == "Average"
+          ? yScale.bandwidth() + 10
+          : yScale.bandwidth()}
+        fill={d.name == "Average" ? "#ffc72c" : "#da291c"}
+      />
+      <rect
+        class="bars-containers"
+        x={margin.left}
+        y={d.name == "Average" ? yScaleData(d.name) - 5 : yScaleData(d.name)}
+        width={xScale(maxPrice)}
+        height={d.name == "Average"
+          ? yScale.bandwidth() + 10
+          : yScale.bandwidth()}
+        stroke={d.name == "Average" ? "#ffc72c" : "#da291c"}
+      />
+    {/each}
+    <Counts {margin} {xScale} yScale={yScaleData} dataPlot={data} />
+  </g>
 
-      <rect x="0" y="0" {width} height={margin.top} fill="white" />
-      <rect x="0" y={margin.top + innerHeight} {width} height={height+200} fill="white" />
+  <rect class="cover-up" x="0" y="0" {width} height={margin.top}  />
+  <rect
+    class="cover-up"
+    x="0"
+    y={margin.top + innerHeight}
+    {width}
+    height={height + 200}
 
-      <g id="cover-chart">
-        {#each data.slice(65, 71) as d, index}
-          <rect
-            class="slice"
-            id={d.name}
-            x={margin.left}
-            y={yScaleData(d.name)}
-            width={xScale(maxPrice)}
-            height={yScale.bandwidth()}
-          />
-        {/each}
-      </g>
 
-      <Buns {width} {height} {margin} {yScale} />
-      <!-- <rect x="0" y="0" {width} {height} stroke="#27251F" fill="None" />
+  />
+
+  <g id="cover-chart">
+    {#each data.slice(65, 71) as d, index}
+      <rect
+        class="slice"
+        id={d.name}
+        x={margin.left}
+        y={yScaleData(d.name)}
+        width={xScale(maxPrice)}
+        height={yScale.bandwidth()}
+      />
+    {/each}
+  </g>
+
+  <Buns {width} {height} {margin} {yScale} />
+  <!-- <rect x="0" y="0" {width} {height} stroke="#27251F" fill="None" />
       <rect
         x={margin.left}
         y={margin.top}
@@ -122,11 +126,9 @@
         stroke="#27251F"
         fill="None"
       /> -->
-    </svg>
+</svg>
 
 <style>
-
-
   #burger-bars {
     opacity: 0;
   }
@@ -145,5 +147,9 @@
     stroke: #da291c;
     stroke-width: 3;
     rx: 15;
+  }
+
+  .cover-up {
+    fill:white;
   }
 </style>

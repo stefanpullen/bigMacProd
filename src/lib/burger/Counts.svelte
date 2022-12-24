@@ -33,7 +33,7 @@
 <style>
   .counter {
     font-family: "Roboto", sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     dominant-baseline: middle;
     font-size: 1em;
     opacity: 0;
@@ -44,6 +44,7 @@
   } */
   #counterRight {
     font-weight: bold;
+    /* font-weight: 500; */
 
     text-anchor: start;
     fill: #27251f;
