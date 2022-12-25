@@ -16,7 +16,6 @@
     flex-direction: column;
     background-color: #da291c;
     color: white;
-
     z-index: 1;
     border-radius: 0px 5px 5px 0px;
   }
@@ -24,7 +23,10 @@
   @media only screen and (max-width: 600px) {
     h2 {
       width: 100%;
-      padding: 30px 5px;
+      padding: 15px 5px;
+      font-size: 3rem;
+
+
     }
   }
 

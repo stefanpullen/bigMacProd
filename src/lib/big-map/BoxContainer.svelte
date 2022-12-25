@@ -25,7 +25,12 @@
   }
   @media only screen and (max-width: 600px) {
     #pannel-container-box {
-      bottom: 10%;
+      bottom: 4%;
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    #pannel-container-box {
+      bottom: 0%;
     }
   }
 </style>

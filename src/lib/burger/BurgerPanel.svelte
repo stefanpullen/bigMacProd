@@ -23,9 +23,12 @@
   @media only screen and (max-width: 600px) {
     h2 {
       width: 100%;
-      padding: 30px 5px;
+      padding: 15px 5px;
+      font-size: 3rem;
     }
   }
+
+  
 
   #p-container-burger {
     color: white;
@@ -35,7 +38,7 @@
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     position: relative;
-    top: -20px;
+    top: -15px;
     border-radius: 5px;
     z-index: 2;
     width: 80%;
