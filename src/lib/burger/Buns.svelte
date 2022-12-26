@@ -37,12 +37,16 @@ C {margin.left * 0.8},{margin.top} {margin.left *
   y={innerHeight + margin.bottom + 5}
   width={innerWidth * 1.05}
   height={yScale.bandwidth() * 1.6}
+  rx=15
+  ry=2000
+
 />
 
 <style>
   #bottom-bun {
-    rx: 15;
-    ry: 200;
+    /* rx: 15;
+    ry: 200; */
+    overflow: hidden;
   }
   .bun {
     fill: #ffc72c;

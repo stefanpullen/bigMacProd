@@ -77,6 +77,7 @@
           ? yScale.bandwidth() + 10
           : yScale.bandwidth()}
         fill={d.name == "Average" ? "#ffc72c" : "#da291c"}
+        rx="15"
       />
       <rect
         class="bars-containers"
@@ -87,20 +88,19 @@
           ? yScale.bandwidth() + 10
           : yScale.bandwidth()}
         stroke={d.name == "Average" ? "#ffc72c" : "#da291c"}
+        rx="15"
       />
     {/each}
     <Counts {margin} {xScale} yScale={yScaleData} dataPlot={data} />
   </g>
 
-  <rect class="cover-up" x="0" y="0" {width} height={margin.top}  />
+  <rect class="cover-up" x="0" y="0" {width} height={margin.top} />
   <rect
     class="cover-up"
     x="0"
     y={margin.top + innerHeight}
     {width}
     height={height + 200}
-
-
   />
 
   <g id="cover-chart">
@@ -112,6 +112,7 @@
         y={yScaleData(d.name)}
         width={xScale(maxPrice)}
         height={yScale.bandwidth()}
+        rx="15"
       />
     {/each}
   </g>
@@ -134,22 +135,27 @@
   }
   .bars {
     /* fill: #da291c; */
-    rx: 15;
+    /* rx: 15; */
+    overflow: hidden;
   }
   .bars-containers {
     fill: none;
     /* stroke: #da291c; */
     stroke-width: 3;
-    rx: 15;
+    overflow: hidden;
+
+    /* rx: 15; */
   }
   .slice {
     fill: #da291c;
     stroke: #da291c;
     stroke-width: 3;
-    rx: 15;
+    overflow: hidden;
+
+    /* rx: 15; */
   }
 
   .cover-up {
-    fill:white;
+    fill: white;
   }
 </style>
